@@ -1,5 +1,5 @@
 body {
-  font-family: 'Roboto', sans-serif;
+  font-family: 'Share Tech Mono', monospace;
 }
 
 .timer {
@@ -25,14 +25,18 @@ body {
 .value {
   display: block;
   margin-bottom: 2vmin;
-  padding: 4vmin 0 4vmin 2vmin;
+  padding: 3vmin 1vmin 3vmin 2vmin;
   text-align: center;
   font-size: 10vmin;
-  letter-spacing: 2vmin;
-  font-weight: bold;
+  letter-spacing: 1vmin;
+  font-weight: 500;
   border-radius: 3vmin;
   background-color: rgba(0, 0, 0, 0.8);
+  text-shadow: 0 0 20px rgba(10, 175, 230, 1),  0 0 20px rgba(10, 175, 230, 0);
   color: #ffffff;
+  background: #0f3854;
+    background: radial-gradient(ellipse at center,  #0a2e38  0%, #000000 70%);
+    background-size: 100%;
 }
 
 .field:not(:last-child)::after{
