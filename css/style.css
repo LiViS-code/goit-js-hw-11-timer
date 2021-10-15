@@ -8,9 +8,28 @@ body {
   display: flex;
   width: 85vmin;
   justify-content: center;
-  background-color: #d3d3d3;
+  /* background-color: #d3d3d3; */
   border: 1px solid #000;
   border-radius: 5vmin;
+   background-color: #0a0a0a;
+  background-image: -webkit-repeating-linear-gradient(315deg,  
+  #232323, #232323 10%,  
+  transparent 10%, transparent 50%
+  ),
+  -webkit-repeating-linear-gradient(225deg,  
+  #232323, #232323 10%,  
+  transparent 10%, transparent 50%
+  );
+  background-image: repeating-linear-gradient(135deg,  
+  #232323, #232323 10%,  
+  transparent 10%, transparent 50%
+  ),
+  repeating-linear-gradient(-135deg,  
+  #232323, #232323 10%,  
+  transparent 10%, transparent 50%
+  );
+  background-size: 12px 12px;
+  
 }
 
 .field {
@@ -51,5 +70,12 @@ body {
   display: block;
   font-size: 3vmin;
   text-align: center;
-  color: rgba(0, 0, 0, 0.8);
+  /* color: rgba(0, 0, 0, 0.8); */
+  border-radius: 3vmin;
+  background-color: rgba(0, 0, 0, 0.8);
+  text-shadow: 0 0 20px rgba(10, 175, 230, 1),  0 0 20px rgba(10, 175, 230, 0);
+  color: #ffffff;
+  background: #0f3854;
+    background: radial-gradient(ellipse at center,  #0a2e38  0%, #000000 70%);
+    background-size: 100%;
 }
