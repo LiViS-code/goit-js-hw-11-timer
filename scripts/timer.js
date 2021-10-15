@@ -27,28 +27,28 @@ class CountdownTimer {
     refs.days.textContent = days;
     if (days === 1) {
       refs.daysLabel.textContent = "Day";
-    } else {
+    } else if (refs.daysLabel.textContent === "Day") {
       refs.daysLabel.textContent = "Days";
     }
 
     refs.hours.textContent = hours;
     if (hours === 1) {
       refs.hoursLabel.textContent = "Hour";
-    } else {
+    } else if (refs.hoursLabel.textContent === "Hour") {
       refs.hoursLabel.textContent = "Hours";
     }
 
     refs.mins.textContent = mins;
     if (mins === 1) {
       refs.minsLabel.textContent = "Minute";
-    } else {
+    } else if (refs.minsLabel.textContent === "Minute") {
       refs.minsLabel.textContent = "Minutes";
     }
 
     refs.secs.textContent = secs;
     if (secs === 1) {
       refs.secsLabel.textContent = "Second";
-    } else {
+    } else if (refs.secsLabel.textContent === "Second") {
       refs.secsLabel.textContent = "Seconds";
     }
   }
@@ -70,7 +70,7 @@ class CountdownTimer {
 
 const myTimer = new CountdownTimer({
   selector: "#timer-1",
-  targetDate: Date.now() + 68000,
+  targetDate: Date.now() + 70000,
 });
 
 myTimer.startTimer();
