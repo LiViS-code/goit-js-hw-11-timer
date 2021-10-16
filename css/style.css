@@ -12,19 +12,19 @@ body {
   border-radius: 5vmin;
   background-color: #0a0a0a;
   background-image: -webkit-repeating-linear-gradient(315deg,  
-  #232323, #232323 10%,  
+  #5a4949, #5a4949 10%,  
   transparent 10%, transparent 50%
   ),
   -webkit-repeating-linear-gradient(225deg,  
-  #232323, #232323 10%,  
+  #5a4949, #5a4949 10%,  
   transparent 10%, transparent 50%
   );
   background-image: repeating-linear-gradient(135deg,  
-  #232323, #232323 10%,  
+  #5a4949, #5a4949 10%,  
   transparent 10%, transparent 50%
   ),
   repeating-linear-gradient(-135deg,  
-  #232323, #232323 10%,  
+  #5a4949, #5a4949 10%,  
   transparent 10%, transparent 50%
   );
   background-size: 12px 12px;
@@ -61,7 +61,7 @@ body {
   content: ':';
   position: absolute;
   top: 20%;
-  left: 100%;
+  left: 97%;
   font-size: 7vmin;
   background-color: rgba(0, 0, 0, 0.8);
   text-shadow: 0 0 5px rgba(10, 175, 230, 1),  0 0 5px rgba(10, 175, 230, 0);
