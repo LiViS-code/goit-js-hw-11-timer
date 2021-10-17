@@ -4,10 +4,10 @@
   --txt-color: #fff;
   --txt-bgd-color: #0f3854;
   --txt-bgd-gradient: radial-gradient(ellipse at center,  #0a2e38  0%, #000000 70%);
-  --txt-shadow: 0 0 20px rgba(10, 175, 230, 1),  0 0 20px rgba(10, 175, 230, 0);
+  --txt-shadow: 0px 0 20px rgb(21, 230, 10),  0 0 20px rgba(10, 175, 230, 0);
 
   --timer-bgd: #141414;
-  --line-color: #5a4949;
+  --line-color: #495a56;
   
   --border-color: #000;
 }
@@ -23,7 +23,7 @@ body {
   width: 85vmin;
   justify-content: center;
   border: 1px solid var(--border-color);
-  border-radius: 5vmin;
+  border-radius: 3vmin;
   background-color: var(--timer-bgd);
   background-image: -webkit-repeating-linear-gradient(315deg,  
   var(--line-color), var(--line-color) 10%,  
@@ -73,9 +73,9 @@ body {
   content: ':';
   position: absolute;
   top: 20%;
-  left: 110%;
+  left: 109.6%;
   font-size: 7vmin;
-  border-radius: 1vmin;
+  border-radius: 2vmin;
   text-shadow: var(--txt-shadow);
   color: var(--txt-color);
   background: var(--txt-bgd-color);
