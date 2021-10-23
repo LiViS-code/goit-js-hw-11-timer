@@ -8,16 +8,16 @@ class CountdownTimer {
 
   updateTimer(time) {
     // ссылки на элементы интерфейса
+    const timer = document.querySelector(this.selector);
     const refs = {
-      timer: document.querySelector(this.selector),
-      days: document.querySelector('[data-value="days"]'),
-      daysLabel: document.querySelector('[data-value="days"] + .label'),
-      hours: document.querySelector('[data-value="hours"]'),
-      hoursLabel: document.querySelector('[data-value="hours"] + .label'),
-      mins: document.querySelector('[data-value="mins"]'),
-      minsLabel: document.querySelector('[data-value="mins"] + .label'),
-      secs: document.querySelector('[data-value="secs"]'),
-      secsLabel: document.querySelector('[data-value="secs"] + .label'),
+      days: timer.querySelector('[data-value="days"]'),
+      daysLabel: timer.querySelector('[data-value="days"] + .label'),
+      hours: timer.querySelector('[data-value="hours"]'),
+      hoursLabel: timer.querySelector('[data-value="hours"] + .label'),
+      mins: timer.querySelector('[data-value="mins"]'),
+      minsLabel: timer.querySelector('[data-value="mins"] + .label'),
+      secs: timer.querySelector('[data-value="secs"]'),
+      secsLabel: timer.querySelector('[data-value="secs"] + .label'),
     };
 
     // разбить целевую дату на дни, часы, минуты, секунды
@@ -88,6 +88,17 @@ const myBDnextYear = {
   targetDate: new Date(`Aug, 8, ${today.getFullYear() + 1}`),
 };
 
-const myTimer = new CountdownTimer(myBDnextYear);
+const newYear = {
+  selector: "#timer-2",
+  targetDate: new Date(`Jan, 1, ${today.getFullYear() + 1}`),
+};
 
-myTimer.startTimer();
+const myTimer1 = new CountdownTimer(myBDnextYear);
+const myTimer2 = new CountdownTimer(newYear);
+
+// myTimer.startTimer();
+const startTimer1 = new Promise((resolve) => (resolve = myTimer1.startTimer()));
+const startTimer2 = new Promise((resolve) => (resolve = myTimer2.startTimer()));
+
+console.log(startTimer1);
+console.log(startTimer2);
