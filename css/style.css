@@ -17,7 +17,7 @@ body {
 }
 
 .timer {
-  margin: 30px auto;
+  margin: 5vmin auto;
   padding: 5vmin;
   display: flex;
   width: 85vmin;
