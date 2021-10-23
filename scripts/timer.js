@@ -96,7 +96,6 @@ const newYear = {
 const myTimer1 = new CountdownTimer(myBDnextYear);
 const myTimer2 = new CountdownTimer(newYear);
 
-// myTimer.startTimer();
 const startTimer1 = new Promise((resolve) => resolve(myTimer1.startTimer()));
 const startTimer2 = new Promise((resolve) => resolve(myTimer2.startTimer()));
 
