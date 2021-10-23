@@ -61,16 +61,17 @@ class CountdownTimer {
   }
 
   startTimer() {
-    // запомнить текущий таймер
-    const thisTimer = this;
-
     // запустить отсчет
-    this.#timerId = setInterval(() => {
-      const time = thisTimer.targetDate - Date.now();
+    this.#timerId = setInterval(
+      () => {
+        const time = this.targetDate - Date.now();
 
-      if (time < 0) return thisTimer.stopTimer(thisTimer.#timerId);
-      return thisTimer.updateTimer(time);
-    }, 1000);
+        if (time < 0) return this.stopTimer(this.#timerId);
+        return this.updateTimer(time);
+      },
+      1000,
+      this
+    );
   }
 
   stopTimer(id) {
