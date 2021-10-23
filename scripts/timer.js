@@ -62,16 +62,21 @@ class CountdownTimer {
 
   startTimer() {
     // запустить отсчет
-    this.#timerId = setInterval(
-      () => {
-        const time = this.targetDate - Date.now();
 
-        if (time < 0) return this.stopTimer(this.#timerId);
-        return this.updateTimer(time);
-      },
-      1000,
-      this
-    );
+    const timer = new Promise((resolve) => {
+      resolve = setInterval(
+        () => {
+          const time = this.targetDate - Date.now();
+
+          if (time < 0) return this.stopTimer(this.#timerId);
+          return this.updateTimer(time);
+        },
+        1000,
+        this
+      );
+    });
+
+    this.#timerId.then(timer);
   }
 
   stopTimer(id) {
