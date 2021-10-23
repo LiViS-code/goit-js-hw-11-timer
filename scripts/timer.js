@@ -1,9 +1,10 @@
 class CountdownTimer {
   #timerId = null;
 
-  constructor({ selector, targetDate }) {
+  constructor({ selector, targetDate, message }) {
     this.selector = selector;
     this.targetDate = targetDate;
+    this.message = message;
   }
 
   updateTimer(time) {
@@ -77,27 +78,37 @@ class CountdownTimer {
   stopTimer(id) {
     // остановить таймер
     clearInterval(id);
-    alert("Время ожидания закончилось!");
+    alert(this.message);
   }
 }
 
 const today = new Date();
 
-const myBDnextYear = {
-  selector: "#timer-1",
-  targetDate: new Date(`Aug, 8, ${today.getFullYear() + 1}`),
-};
+// список таймеров
+const myTimers = [
+  {
+    name: "myBDnextYear",
+    selector: "#timer-1",
+    targetDate: new Date(`Aug, 8, ${today.getFullYear() + 1}`),
+    message: "С днем рождения!",
+  },
+  {
+    name: "newYear",
+    selector: "#timer-2",
+    targetDate: new Date(`Jan, 1, ${today.getFullYear() + 1}`),
+    message: "С Новым Годом!",
+  },
+  {
+    name: "eggs",
+    selector: "#timer-3",
+    targetDate: Date.now() + 5 * 60 * 1000,
+    message: "Яйца сварились, приятного аппетита!",
+  },
+];
 
-const newYear = {
-  selector: "#timer-2",
-  targetDate: new Date(`Jan, 1, ${today.getFullYear() + 1}`),
-};
-
-const myTimer1 = new CountdownTimer(myBDnextYear);
-const myTimer2 = new CountdownTimer(newYear);
-
-const startTimer1 = new Promise((resolve) => resolve(myTimer1.startTimer()));
-const startTimer2 = new Promise((resolve) => resolve(myTimer2.startTimer()));
-
-startTimer1.then(console.log(`Таймер ${myBDnextYear.selector} запущен`));
-startTimer1.then(console.log(`Таймер ${newYear.selector} запущен`));
+// запустить все таймеры
+myTimers.forEach((timer) => {
+  let myTimer = new CountdownTimer(timer);
+  let startTimer = new Promise((resolve) => resolve(myTimer.startTimer()));
+  startTimer.then(console.log(`Таймер ${timer.selector} запущен`));
+});
