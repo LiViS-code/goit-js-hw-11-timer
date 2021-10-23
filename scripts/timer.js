@@ -69,7 +69,7 @@ class CountdownTimer {
         if (time < 0) return this.stopTimer(this.#timerId);
         return this.updateTimer(time);
       },
-      1000,
+      250,
       this
     );
   }
